@@ -8,6 +8,6 @@ const app = express()
 app.use(cors({ origin: "https://novactech-helpdesk.freshservice.com/" }))
 app.use(express.json())
 app.use("/", routes)
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("node_connected");
 })
